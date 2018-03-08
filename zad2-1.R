@@ -25,6 +25,7 @@ liczba_liter_miesiace <- c(7, 4, 6, 8, 3, 8, 6, 8, 8, 11, 8, 8)
 mean(liczba_liter_miesiace)
 sd(liczba_liter_miesiace)
 
+#8
 zima <- c(8, 7, 4, 6)
 mean(zima)
 sd(zima)
