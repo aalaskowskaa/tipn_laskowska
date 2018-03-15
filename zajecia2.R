@@ -33,7 +33,7 @@ zima <- c(8, 7, 4, 6)
 mean(zima)
 sd(zima)
 
-#zad. 2-2
+# zad. 2-2
 
 ilosc_godzin <- function(aktualny_dzien, aktualny_miesiac, aktualny_rok, poslizg) {
   ilosc_godzin_2018 <- (((12 - aktualny_miesiac) * 30) - (30 - aktualny_dzien)) * 24
@@ -57,7 +57,7 @@ for(i in lata_przestepne) {
   }
 }
 
-#zad. 2-4
+# zad. 2-4
 
 # zad. 2-3 z pêtl¹ while
 
