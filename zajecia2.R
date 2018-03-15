@@ -31,6 +31,7 @@ sd(liczba_liter_miesiace)
 
 zima <- c(8, 7, 4, 6)
 mean(zima)
+sd(zima)
 
 #zad. 2-2
 
@@ -66,4 +67,3 @@ while(rok <= 2018) {
     print(rok)
   rok <-  rok + 1
 }
-sd(zima)
