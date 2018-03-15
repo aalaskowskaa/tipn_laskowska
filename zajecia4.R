@@ -50,4 +50,5 @@ ggplot(data = mpg) +
 
 ggplot(data = mpg, aes(x = class, y = displ)) +
   geom_boxplot() +
+  coord_flip() +
   labs(title = "Zale¿noœæ pojemnoœci silnika od klasy samochodu", x = "Klasa samochodu", y = "Pojemnoœæ silnika")
