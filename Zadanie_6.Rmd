@@ -1,0 +1,71 @@
+---
+title: "Zadanie_6"
+author: "Aleksandra Laskowska"
+date: "8 maja 2018"
+output: html_document
+theme: united
+highlight: tango
+df_print: paged
+---
+
+## Diamenty
+
+Diament – bardzo rzadki minerał z gromady pierwiastków rodzimych. Nazwa pochodzi od stgr. ἀδάμας adamas (dopełniacz ἀδάμαντος adamantos, łac. diamentum), co znaczy „niepokonany, niezniszczalny” i nawiązuje do wyjątkowej twardości tego minerału. Jest najtwardszą znaną substancją z występujących w przyrodzie.
+
+#### Ciekawostka
+
+Antoine Lavoisier po raz pierwszy spalił diament pod szklanym kloszem, używając promieni słonecznych skupionych soczewką. Udowodnił w ten sposób, że diament to czysty węgiel.
+
+#### Właściwości diamentów
+
+1. Ma dobrą przewodność cieplną.
+2. Jest izolatorem (z wyjątkiem diamentu niebieskiego, będącego półprzewodnikiem).
+3. Jest trudno topliwy i odporny na działanie kwasów i zasad.
+4. Może zawierać wrostki innych minerałów.
+
+
+Ze względu na cechy zewnętrzne wyróżnia się kilka typów diamentów:
+
+* bort – występuje w postaci nieregularnych zrostów ziarnistych, drobnokrystalicznych skupień
+* ballas – włóknisto-promieniste skupienia kryształów diamentu, występuje zwykle z bortem
+* lonsdaleit – odmiana diamentu występująca w meteorytach, o sieci regularnej z licznymi defektami
+* karbonado – zwany też czarnym diamentem, występuje w postaci drobnoziarnistych, porowatych skupień zabarwionych na czarno, szaro lub ciemnozielono, o różnej wielkości
+
+
+Wszystko o diamentach:
+
+[Informacje](https://www.geselle.pl)
+
+
+Co jest ważne, kiedy sprawdamy diamenty:
+
+**Karaty** | **Cięcie** | **Kolor** | **Cena**
+:---:|:---:|:---:|:---:|:---:
+Ilość karatów | Jakość | Odcień | Wartość 
+
+
+#### Diamenty
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+diamonds %>% filter(cut == "Ideal")
+```
+
+
+#### Cena w zależności od ilości karatów
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+diamenty <- diamonds 
+
+ggplot(diamenty, aes(price, carat)) + 
+geom_point() +
+labs(title = "Cena a karaty", x = "Ilość karatów", y = "Cena")
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
