@@ -29,3 +29,9 @@ filter(movies, Animation == 1, year >=1990 & year < 2000) %>%
 
 dramaty <- filter(movies, Drama == 1)
 arrange(dramaty, desc(length))
+
+
+# zad. 5-6
+
+mpaa_rating <- group_by(movies, mpaa) %>%
+  summarise (srednia = mean(rating), odchylenie = mad(rating))
